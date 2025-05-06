@@ -49,7 +49,7 @@ def insert_exchange(items):
                     """
         
         cursor.executemany(sql, items)
-        #connection.commit()
+        connection.commit()
         print("Data was successfully inserted")
     except(OperationalError, DatabaseError) as e: 
         print("Database error", e)
